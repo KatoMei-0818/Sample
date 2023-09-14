@@ -23,7 +23,7 @@
 
 
             <div class="fixed top-0 right-0 px-6 py-4 sm:block">
-                <a href="http://127.0.0.1:8000/admin/auth/login" class="text-sm text-gray-700 dark:text-gray-500 underline">管理者</a>
+                <a href="{{ route('admin.login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">管理者</a>
             </div>
 
             <div>
