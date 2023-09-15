@@ -45,11 +45,10 @@ return [
         ],
 
         'admin' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/admin'),
-            'url' => env('APP_URL').'/storage/admin',
-            'visibility' => 'public',
-            'throw' => false,
+            'driver' =>'local',
+            'root' => public_path('uploads'),
+            'visibility' =>'public',
+            'url' => env('APP_URL').'/uploads',
         ],
 
         's3' => [
