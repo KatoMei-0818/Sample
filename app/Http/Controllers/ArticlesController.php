@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Auth;
 class ArticlesController extends Controller
 {
     public function index(Request $request) {
-        //$articles = Article::latest('published_at')->latest('created_at')->published()->get();
 
         $tag_list = Tag::pluck('name', 'id');
         $articles = Article::query();
@@ -106,7 +105,7 @@ class ArticlesController extends Controller
             $q->where('users.name', 'LIKE',"{$keyuser}");
               })->get();
 
-        $posts = $articles->latest('published_at')->latest('created_at')->get();
+        $posts = $articles->latest('published_at')->latest('created_at')->published()->get();
               
         return view('articles.userpage', compact('posts', 'user'));
     }
