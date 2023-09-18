@@ -22,7 +22,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ArticlesController::class, 'index'])->name('home');
-Route::get('contact', [PagesController::class, 'contact'])->name('contact');
 Route::get('about', [PagesController::class, 'about'])->name('about');
 Route::resource('articles', ArticlesController::class);
 Route::get('userpage/{id}', [ArticlesController::class, 'userpage'])->name('userpage');
